@@ -20,4 +20,5 @@ All plugins are loaded with [vim-pathogen](https://github.com/tpope/vim-pathogen
 
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
+- [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-stylus](https://github.com/wavded/vim-stylus)
