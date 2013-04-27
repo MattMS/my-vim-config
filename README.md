@@ -15,15 +15,14 @@ Each of these have been stored as submodules in the bundle folder.
 
 All plugins are loaded with [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
+- [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+- [solarized](https://github.com/altercation/solarized)
+- [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
 
-### Syntax highlighting
+
+### Language support
 
 - [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 - [vim-jade](https://github.com/digitaltoad/vim-jade)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
 - [vim-stylus](https://github.com/wavded/vim-stylus)
-
-
-### Navigation
-
-- [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)

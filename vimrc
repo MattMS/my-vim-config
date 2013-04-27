@@ -13,5 +13,10 @@ set incsearch
 set cc=80
 
 " set gfn=Ubuntu_Mono:h12:cANSI
-" set guioptions-=T
-" colorscheme slate
+set guioptions-=T
+
+set background=dark
+colorscheme solarized
+
+" http://www.bestofvim.com/tip/switch-off-current-search/
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
