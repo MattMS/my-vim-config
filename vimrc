@@ -38,6 +38,14 @@ nnoremap <Leader>f :bn<CR>
 inoremap <C-V> <C-R>*
 inoremap <C-Z> <ESC>ui
 
+" Selection shortcuts for insert mode
+inoremap <S-Left> <ESC>v
+inoremap <S-Right> <ESC>lvl
+inoremap <S-Up> <ESC>lvk
+inoremap <S-Down> <ESC>lvj
+inoremap <C-S-Left> <ESC>vb
+inoremap <C-S-Right> <ESC>lve
+
 " Reload vimrc on save
 " http://www.bestofvim.com/tip/auto-reload-your-vimrc/
 augroup reload_vimrc " {
