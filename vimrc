@@ -46,6 +46,14 @@ inoremap <S-Down> <ESC>lvj
 inoremap <C-S-Left> <ESC>vb
 inoremap <C-S-Right> <ESC>lve
 
+" Closing brackets and quotes
+" http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+
 " Reload vimrc on save
 " http://www.bestofvim.com/tip/auto-reload-your-vimrc/
 augroup reload_vimrc " {
