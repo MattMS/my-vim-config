@@ -15,7 +15,8 @@ set incsearch
 set cc=72,80
 
 if has('gui_running')
-	" set gfn=Ubuntu_Mono:h12:cANSI
+	"set gfn=Ubuntu\ Mono:h10
+	set guifontset=Ubuntu\ Mono
 	set guioptions-=T
 	set background=dark
 	colorscheme solarized
@@ -53,6 +54,10 @@ inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
+
+" Standard shortcut for visual mode
+" Ctrl-C copies to clipboard
+vnoremap <C-C> "+y
 
 " Reload vimrc on save
 " http://www.bestofvim.com/tip/auto-reload-your-vimrc/
