@@ -17,27 +17,48 @@ set cc=72,80
 if has('gui_running')
 	"set gfn=Ubuntu\ Mono:h10
 	set guifontset=Ubuntu\ Mono
+	set guioptions-=m
 	set guioptions-=T
 	set background=dark
 	colorscheme solarized
 else
+	"colorscheme molokai
 	colorscheme slate
 endif
 
+
 " http://www.bestofvim.com/tip/switch-off-current-search/
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
+" Shift-Space to trigger EasyMotion
+nmap <silent> <S-Space> <Space><Space>
 
 " Quicker buffer switching
 " http://vim.wikia.com/wiki/Easier_buffer_switching
 nnoremap <Leader>l :ls<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>d :bd<CR>
+
+" Add new lines
+nnoremap <Return> o<ESC>
+nnoremap <S-Return> O<ESC>j
+
+" Split line
+nnoremap K i<CR><Esc>
+
+" Ctrl-S to save
+inoremap <silent> <C-S> <ESC>:w<CR>
+nnoremap <silent> <C-S> :w<CR>
+" Ctrl-Q to quit completely
+nnoremap <silent> <C-Q> :qa<CR>
 
 " Standard shortcuts for insert mode
 " Ctrl-V pastes from clipboard
 " Ctrl-Z to undo
 inoremap <C-V> <C-R>*
 inoremap <C-Z> <ESC>ui
+"inoremap <C-I> <ESC>a
 
 " Selection shortcuts for insert mode
 inoremap <S-Left> <ESC>v
@@ -58,6 +79,10 @@ inoremap " ""<ESC>i
 " Standard shortcut for visual mode
 " Ctrl-C copies to clipboard
 vnoremap <C-C> "+y
+
+
+set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
+
 
 " Reload vimrc on save
 " http://www.bestofvim.com/tip/auto-reload-your-vimrc/
