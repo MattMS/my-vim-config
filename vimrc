@@ -83,6 +83,8 @@ vnoremap <C-C> "+y
 
 set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
 
+let g:ctrlp_working_path_mode = ''
+
 
 " Reload vimrc on save
 " http://www.bestofvim.com/tip/auto-reload-your-vimrc/
