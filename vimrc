@@ -12,10 +12,9 @@ set tabstop=4
 set hlsearch
 set incsearch
 
-set cc=72,80
+set colorcolumn=72,80
 
 if has('gui_running')
-	"set gfn=Ubuntu\ Mono:h10
 	set guifontset=Ubuntu\ Mono
 	set guioptions-=m
 	set guioptions-=T
@@ -30,12 +29,10 @@ endif
 " http://www.bestofvim.com/tip/switch-off-current-search/
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
-" Shift-Space to trigger EasyMotion
-nmap <silent> <S-Space> <Space><Space>
-
 " Quicker buffer switching
 " http://vim.wikia.com/wiki/Easier_buffer_switching
-nnoremap <Leader>l :ls<CR>
+"nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>l :Unite -quick-match buffer<CR>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>d :bd<CR>
@@ -79,6 +76,18 @@ inoremap " ""<ESC>i
 " Standard shortcut for visual mode
 " Ctrl-C copies to clipboard
 vnoremap <C-C> "+y
+
+
+" Shift-Space to trigger EasyMotion
+nmap <silent> <S-Space> <Space><Space>
+vmap <silent> <S-Space> <Space><Space>
+
+" Unite yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <Leader>y :Unite history/yank<CR>
+
+" Unite file search
+nnoremap <Leader>s :Unite -start-insert file_rec<CR>
 
 
 set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
