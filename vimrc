@@ -15,7 +15,7 @@ set incsearch
 set colorcolumn=72,80
 
 if has('gui_running')
-	set guifontset=Ubuntu\ Mono
+	set guifont=Ubuntu\ Mono\ 12
 	set guioptions-=m
 	set guioptions-=T
 	set background=dark
