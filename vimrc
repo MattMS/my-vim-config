@@ -31,11 +31,12 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " Quicker buffer switching
 " http://vim.wikia.com/wiki/Easier_buffer_switching
-"nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>l :Unite -quick-match buffer<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>d :bd<CR>
+"nnoremap <Leader>l :ls<CR>
+nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>f :Unite -quick-match buffer<CR>
+nnoremap <Leader>n :bn<CR>
+nnoremap <Leader>p :bp<CR>
 
 " Add new lines
 nnoremap <Return> o<ESC>
@@ -88,6 +89,11 @@ nnoremap <Leader>y :Unite history/yank<CR>
 
 " Unite file search
 nnoremap <Leader>s :Unite -start-insert file_rec<CR>
+
+" Git shortcuts
+nnoremap <Leader>c :Gcommit<CR>
+nnoremap <Leader>g :Gstatus<CR>
+nnoremap <Leader>m :Gdiff<CR>
 
 
 set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
