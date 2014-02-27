@@ -16,7 +16,9 @@ set colorcolumn=72,80
 
 if has('gui_running')
 	set guifont=Ubuntu\ Mono\ 12
+	set guioptions-=L
 	set guioptions-=m
+	set guioptions-=r
 	set guioptions-=T
 	set background=dark
 	colorscheme solarized
@@ -32,11 +34,12 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 " Quicker buffer switching
 " http://vim.wikia.com/wiki/Easier_buffer_switching
 nnoremap <Leader>d :bd<CR>
-"nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>f :Unite -quick-match buffer<CR>
 nnoremap <Leader>n :bn<CR>
 nnoremap <Leader>p :bp<CR>
+
+" File browsing
+nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>f :Unite -quick-match buffer<CR>
 
 " Add new lines
 nnoremap <Return> o<ESC>
