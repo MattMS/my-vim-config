@@ -12,6 +12,8 @@ set tabstop=4
 set hlsearch
 set incsearch
 
+let g:netrw_banner=0
+
 set colorcolumn=72,80
 
 if has('gui_running')
