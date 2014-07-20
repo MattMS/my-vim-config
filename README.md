@@ -29,7 +29,7 @@ Each of these have been stored as submodules in the bundle folder.
 All plugins are loaded with
 [Pathogen](https://github.com/tpope/vim-pathogen).
 
-- [CtrlP](https://github.com/kien/ctrlp.vim)
+- [Airline](https://github.com/bling/vim-airline)
 - [Easymotion](https://github.com/Lokaltog/vim-easymotion)
 - [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
