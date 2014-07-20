@@ -9,7 +9,10 @@ set noexpandtab
 set shiftwidth=4
 set tabstop=4
 
+" Highlight the search text as you search for it.
 set hlsearch
+
+" Search as you type characters.
 set incsearch
 
 let g:netrw_banner=0
