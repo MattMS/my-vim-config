@@ -17,6 +17,7 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
+" Hide banner in file browser.
 let g:netrw_banner=0
 
 set colorcolumn=72,80
