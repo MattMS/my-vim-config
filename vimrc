@@ -11,6 +11,9 @@ set noexpandtab
 set shiftwidth=4
 set tabstop=4
 
+" Always show vim-airline.
+set laststatus=2
+
 " Highlight the search text as you search for it.
 set hlsearch
 
