@@ -54,6 +54,7 @@ nnoremap <Leader>p :bp<CR>
 
 " File browsing
 nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>E :Unite file<CR>
 nnoremap <Leader>f :Unite -quick-match buffer<CR>
 
 " Add new lines
