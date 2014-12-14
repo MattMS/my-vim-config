@@ -26,6 +26,12 @@ mklink "My Documents\config\my-vim-config\vimrc" _vimrc
 
 Each of these have been stored as submodules in the bundle folder.
 
+Update all submodules with:
+
+```bash
+git submodule foreach git pull origin master
+```
+
 All plugins are loaded with
 [Pathogen](https://github.com/tpope/vim-pathogen).
 
