@@ -46,6 +46,9 @@ endif
 " http://www.bestofvim.com/tip/switch-off-current-search/
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
+" Toggle relative line numbers in gutter.
+nnoremap <Leader>i :set rnu!<CR>
+
 " Quicker buffer switching
 " http://vim.wikia.com/wiki/Easier_buffer_switching
 nnoremap <Leader>d :bd<CR>
