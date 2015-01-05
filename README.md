@@ -32,6 +32,12 @@ Update all submodules with:
 git submodule foreach git pull origin master
 ```
 
+Update submodules after pulling changes.
+
+```bash
+git submodule update
+```
+
 All plugins are loaded with
 [Pathogen](https://github.com/tpope/vim-pathogen).
 
