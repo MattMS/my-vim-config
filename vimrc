@@ -1,18 +1,29 @@
 set nocompatible
 
-let mapleader = " "
 
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-syntax on
-filetype plugin indent on
-set noexpandtab
-set shiftwidth=4
-set tabstop=4
 
-" Always show vim-airline.
-set laststatus=2
+syntax on
+
+filetype plugin indent on
+
+
+let mapleader = " "
+
+" Hide banner in file browser.
+let g:netrw_banner=0
+
+" Unite yank history
+let g:unite_source_history_yank_enable = 1
+
+
+" Allow backspace to work on existing text when entering insert mode.
+" http://vim.wikia.com/wiki/Erasing_previously_entered_characters_in_insert_mode
+set backspace=eol,indent,start
+
+set colorcolumn=72,80
 
 " Highlight the search text as you search for it.
 set hlsearch
@@ -20,10 +31,17 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
-" Hide banner in file browser.
-let g:netrw_banner=0
+" Always show vim-airline.
+set laststatus=2
 
-set colorcolumn=72,80
+set noexpandtab
+
+set shiftwidth=4
+
+set tabstop=4
+
+set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
+
 
 if has('gui_running')
 	if has("gui_win32")
@@ -31,14 +49,17 @@ if has('gui_running')
 	else
 		set guifont=Ubuntu\ Mono\ 12
 	endif
+
 	set guioptions-=L
 	set guioptions-=m
 	set guioptions-=r
 	set guioptions-=T
+
 	set background=dark
+
 	colorscheme solarized
+
 else
-	"colorscheme molokai
 	colorscheme slate
 endif
 
@@ -105,8 +126,6 @@ vnoremap <C-C> "+y
 nmap <silent> <S-Space> <Space><Space>
 vmap <silent> <S-Space> <Space><Space>
 
-" Unite yank history
-let g:unite_source_history_yank_enable = 1
 nnoremap <Leader>y :Unite history/yank<CR>
 
 " Unite file search
@@ -116,14 +135,3 @@ nnoremap <Leader>s :Unite -start-insert file_rec<CR>
 nnoremap <Leader>c :Gcommit<CR>
 nnoremap <Leader>g :Gstatus<CR>
 nnoremap <Leader>m :Gdiff<CR>
-
-
-set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
-
-
-" Reload vimrc on save
-" http://www.bestofvim.com/tip/auto-reload-your-vimrc/
-augroup reload_vimrc " {
-	autocmd!
-	autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
