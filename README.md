@@ -17,8 +17,9 @@ ln -s ~/Documents/my-vim-config/vimrc ~/.vimrc
 ### Windows
 
 ```
-mklink /D "My Documents\config\my-vim-config" vimfiles
-mklink "My Documents\config\my-vim-config\vimrc" _vimrc
+cd C:\Users\my_name
+mklink /D vimfiles C:\Users\my_name\Documents\config\my-vim-config
+mklink _vimrc C:\Users\my_name\Documents\config\my-vim-config\vimrc
 ```
 
 
