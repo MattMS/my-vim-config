@@ -34,6 +34,7 @@ git submodule foreach git pull origin master
 ```
 
 Then `git add bundle/*`, `git commit` and `git push`.
+GitHub for Windows does not currently like doing this.
 
 **On other machines** update submodules after pulling changes:
 
