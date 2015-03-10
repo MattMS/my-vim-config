@@ -18,8 +18,8 @@ ln -s ~/Documents/my_vim_config/vimrc ~/.vimrc
 
 ```
 cd C:\Users\my_name
-mklink /D vimfiles C:\Users\my_name\Documents\config\my_vim_config
-mklink _vimrc C:\Users\my_name\Documents\config\my_vim_config\vimrc
+mklink /D vimfiles C:\Users\my_name\Documents\GitHub\my_vim_config
+mklink _vimrc C:\Users\my_name\Documents\GitHub\my_vim_config\vimrc
 ```
 
 
