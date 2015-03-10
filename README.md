@@ -33,7 +33,9 @@ Update all submodules with:
 git submodule foreach git pull origin master
 ```
 
-Update submodules after pulling changes.
+Then `git add bundle/*`, `git commit` and `git push`.
+
+**On other machines** update submodules after pulling changes:
 
 ```bash
 git submodule update
