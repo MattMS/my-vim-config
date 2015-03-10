@@ -25,22 +25,7 @@ mklink _vimrc C:\Users\my_name\Documents\config\my_vim_config\vimrc
 
 ## Plugins
 
-Each of these have been stored as submodules in the bundle folder.
-
-Update all submodules with:
-
-```bash
-git submodule foreach git pull origin master
-```
-
-Then `git add bundle/*`, `git commit` and `git push`.
-GitHub for Windows does not currently like doing this.
-
-**On other machines** update submodules after pulling changes:
-
-```bash
-git submodule update
-```
+Each of these are saved as submodules in the `bundle` folder.
 
 All plugins are loaded with
 [Pathogen](https://github.com/tpope/vim-pathogen).
@@ -68,3 +53,21 @@ All plugins are loaded with
 ### Colour scheme
 
 - [Solarized](https://github.com/altercation/solarized)
+
+
+### Updating plugins
+
+Update all submodules with:
+
+```bash
+git submodule foreach git pull origin master
+```
+
+Then `git add bundle/*`, `git commit` and `git push`.
+GitHub for Windows does not currently like doing this.
+
+**On other machines** update submodules after pulling changes:
+
+```bash
+git submodule update
+```
