@@ -9,8 +9,8 @@ Windows.
 ### Linux
 
 ```bash
-ln -s ~/Documents/my-vim-config ~/.vim
-ln -s ~/Documents/my-vim-config/vimrc ~/.vimrc
+ln -s ~/Documents/my_vim_config ~/.vim
+ln -s ~/Documents/my_vim_config/vimrc ~/.vimrc
 ```
 
 
@@ -18,8 +18,8 @@ ln -s ~/Documents/my-vim-config/vimrc ~/.vimrc
 
 ```
 cd C:\Users\my_name
-mklink /D vimfiles C:\Users\my_name\Documents\config\my-vim-config
-mklink _vimrc C:\Users\my_name\Documents\config\my-vim-config\vimrc
+mklink /D vimfiles C:\Users\my_name\Documents\config\my_vim_config
+mklink _vimrc C:\Users\my_name\Documents\config\my_vim_config\vimrc
 ```
 
 
