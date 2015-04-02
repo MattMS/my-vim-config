@@ -30,7 +30,6 @@ Each of these are saved as submodules in the `bundle` folder.
 All plugins are loaded with
 [Pathogen](https://github.com/tpope/vim-pathogen).
 
-- [Airline](https://github.com/bling/vim-airline)
 - [Easymotion](https://github.com/Lokaltog/vim-easymotion)
 - [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
@@ -55,7 +54,19 @@ All plugins are loaded with
 - [Solarized](https://github.com/altercation/solarized)
 
 
-### Updating plugins
+### Old plugins
+
+Used [Airline](https://github.com/bling/vim-airline) for a while, but
+could never get the patched fonts to work.
+Removed when I realised I did not check it enough to justify having it.
+`Ctrl + G` works fine.
+
+Replaced [Ctrlp](https://github.com/kien/ctrlp.vim) with Unite.
+
+
+## Managing plugins
+
+### Update plugins
 
 Update all submodules with:
 
