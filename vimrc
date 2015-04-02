@@ -31,9 +31,6 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
-" Always show vim-airline.
-set laststatus=2
-
 set noexpandtab
 
 set shiftwidth=4
