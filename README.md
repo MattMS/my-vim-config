@@ -71,3 +71,15 @@ GitHub for Windows does not currently like doing this.
 ```bash
 git submodule update
 ```
+
+
+### Remove plugin
+
+From: [How do I remove a Git submodule?](http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule)
+
+```bash
+git submodule deinit bundle/my_submodule
+git rm bundle/my_submodule
+git commit -m "Remove my_submodule"
+rm -rf .git/modules/bundle/my_submodule
+```
