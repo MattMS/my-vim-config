@@ -31,6 +31,9 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
+" 0 = show on horizontal split; 1 = show if 2+ windows; 2 = always show.
+set laststatus=0
+
 set noexpandtab
 
 set shiftwidth=4
