@@ -97,3 +97,7 @@ git rm bundle/my_submodule
 git commit -m "Remove my_submodule"
 rm -rf .git/modules/bundle/my_submodule
 ```
+
+## Notes
+
+- http://vim.wikia.com/wiki/Easier_buffer_switching
