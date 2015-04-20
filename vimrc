@@ -10,12 +10,13 @@ syntax on
 filetype plugin indent on
 
 
+" Use space as the mapleader character.
 let mapleader = " "
 
 " Hide banner in file browser.
 let g:netrw_banner=0
 
-" Unite yank history
+" Unite yank history.
 let g:unite_source_history_yank_enable = 1
 
 
@@ -31,9 +32,12 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
-" 0 = show on horizontal split; 1 = show if 2+ windows; 2 = always show.
+" 0 = show on horizontal split.
+" 1 = show if 2+ windows.
+" 2 = always show.
 set laststatus=0
 
+" Do not change tabs to spaces.
 set noexpandtab
 
 set shiftwidth=4
@@ -50,11 +54,22 @@ if has('gui_running')
 		set guifont=Ubuntu\ Mono\ 12
 	endif
 
+	" Hide left scrollbar.
+	" By default it only appears if there is more than one buffer visible.
 	set guioptions-=L
+
+	" Hide GUI menus.
 	set guioptions-=m
+
+	" Hide right scrollbar.
+	" Always shown by default.
 	set guioptions-=r
+
+	" Hide GUI toolbar.
 	set guioptions-=T
 
+	" Default to the dark Solarized colorscheme.
+	" Change with `set background=light`.
 	set background=dark
 
 	colorscheme solarized
@@ -64,45 +79,67 @@ else
 endif
 
 
+"
+" Normal mode
+"
+
+" Stop highlighting matching text from the last search.
 " http://www.bestofvim.com/tip/switch-off-current-search/
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
-" Toggle relative line numbers in gutter.
-nnoremap <Leader>i :set rnu!<CR>
-
-" Quicker buffer switching
-" http://vim.wikia.com/wiki/Easier_buffer_switching
-nnoremap <Leader>d :bd<CR>
-nnoremap <Leader>n :bn<CR>
-nnoremap <Leader>p :bp<CR>
-
-" File browsing
-nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>E :Unite file -no-split<CR>
-nnoremap <Leader>F :Unite buffer<CR>
-nnoremap <Leader>f :Unite buffer -quick-match<CR>
-
-" Add new lines
+" Add a new line after the current one.
 nnoremap <Return> o<ESC>
+
+" Add a new line before the current one.
 nnoremap <S-Return> O<ESC>j
 
-" Split line
+" Shift-Space to trigger EasyMotion.
+" This is followed by the direction/method of search.
+nmap <silent> <S-Space> <Space><Space>
+
+" Delete the current buffer.
+" Same as `:bd`.
+nnoremap <Leader>d :bdelete<CR>
+
+" View files in folder of current buffer.
+nnoremap <Leader>e :Explore<CR>
+
+nnoremap <Leader>E :Unite file -no-split<CR>
+
+" Show buffers with single key switching.
+nnoremap <Leader>f :Unite buffer -quick-match<CR>
+
+" Show buffers with normal navigation.
+" `d` deletes the highlighted buffer.
+nnoremap <Leader>F :Unite buffer<CR>
+
+" Toggle relative line numbers in gutter.
+" Same as `:rnu`.
+nnoremap <Leader>i :set relativenumber!<CR>
+
+" Split line.
 nnoremap K i<CR><Esc>
 
-" Ctrl-S to save
-inoremap <silent> <C-S> <ESC>:w<CR>
-nnoremap <silent> <C-S> :w<CR>
-" Ctrl-Q to quit completely
-nnoremap <silent> <C-Q> :qa<CR>
+" Change to next buffer.
+" Same as `:bn`.
+nnoremap <Leader>n :bnext<CR>
 
-" Standard shortcuts for insert mode
-" Ctrl-V pastes from clipboard
-" Ctrl-Z to undo
-inoremap <C-V> <C-R>*
-inoremap <C-Z> <ESC>ui
-"inoremap <C-I> <ESC>a
+" Change to previous buffer.
+" Same as `:bp`.
+nnoremap <Leader>p :bprevious<CR>
 
-" Selection shortcuts for insert mode
+" Ctrl-S to save.
+nnoremap <silent> <C-S> :write<CR>
+
+" Ctrl-Q to quit completely.
+nnoremap <silent> <C-Q> :quitall<CR>
+
+
+"
+" Insert mode
+"
+
+" Arrow key selection shortcuts.
 inoremap <S-Left> <ESC>v
 inoremap <S-Right> <ESC>lvl
 inoremap <S-Up> <ESC>lvk
@@ -118,16 +155,28 @@ inoremap { {}<ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 
-" Standard shortcut for visual mode
+" Ctrl-S to save
+inoremap <silent> <C-S> <ESC>:w<CR>
+
+" Ctrl-V pastes from clipboard
+inoremap <C-V> <C-R>*
+
+" Ctrl-Z to undo
+inoremap <C-Z> <ESC>ui
+
+
+"
+" Visual mode
+"
+
+" Shift-Space to trigger EasyMotion.
+" This is followed by the direction/method of search.
+vmap <silent> <S-Space> <Space><Space>
+
 " Ctrl-C copies to clipboard
 vnoremap <C-C> "+y
 
-
-" Shift-Space to trigger EasyMotion
-nmap <silent> <S-Space> <Space><Space>
-vmap <silent> <S-Space> <Space><Space>
-
-nnoremap <Leader>y :Unite history/yank<CR>
-
 " Unite file search
 nnoremap <Leader>s :Unite -start-insert file_rec<CR>
+
+nnoremap <Leader>y :Unite history/yank<CR>
