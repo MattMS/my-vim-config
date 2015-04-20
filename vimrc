@@ -131,8 +131,3 @@ nnoremap <Leader>y :Unite history/yank<CR>
 
 " Unite file search
 nnoremap <Leader>s :Unite -start-insert file_rec<CR>
-
-" Git shortcuts
-nnoremap <Leader>c :Gcommit<CR>
-nnoremap <Leader>g :Gstatus<CR>
-nnoremap <Leader>m :Gdiff<CR>
