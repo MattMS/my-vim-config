@@ -11,13 +11,33 @@ filetype plugin indent on
 
 
 " Use space as the mapleader character.
-let mapleader = " "
+let mapleader=" "
+
+" View netrw keyboard shortcuts at 'netrw-browse-maps'.
 
 " Hide banner in file browser.
 let g:netrw_banner=0
 
+" Show non-hidden files by default.
+let g:netrw_hide=1
+
+" 'a' cycles the hiding modes.
+" 'c-h' allows editing the /hide list.
+let g:netrw_list_hide='^\..*'
+
+"let g:netrw_menu=0
+
+" 'p' shows preview of selected file.
+"let g:netrw_preview=1
+
+" Ignore case when sorting files.
+let g:netrw_sort_options='i'
+
+" Show '^\.' files after all others.
+let g:netrw_sort_sequence='^\.\.?[\/]$,*,^\.[^.\/]'
+
 " Unite yank history.
-let g:unite_source_history_yank_enable = 1
+let g:unite_source_history_yank_enable=1
 
 
 " Allow backspace to work on existing text when entering insert mode.
