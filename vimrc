@@ -117,6 +117,9 @@ nnoremap <S-Return> O<ESC>j
 " This is followed by the direction/method of search.
 nmap <silent> <S-Space> <Space><Space>
 
+" Start nerdcommenter (shortcut added by plugin).
+" nnoremap <Leader>c
+
 " [Set working directory to the current file](http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file)
 nnoremap <Leader>C :cd %:p:h<CR>
 
