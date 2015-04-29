@@ -157,8 +157,16 @@ nnoremap <Leader>p :bprevious<CR>
 " Ctrl-S to save.
 nnoremap <silent> <C-S> :write<CR>
 
+" Control window splits with `Space s` instead of `Ctrl+w`
+nnoremap <Leader>s <C-W>
+
+" Unite file search
+"nnoremap <Leader>s :Unite -start-insert file_rec<CR>
+
 " Ctrl-Q to quit completely.
 nnoremap <silent> <C-Q> :quitall<CR>
+
+nnoremap <Leader>y :Unite history/yank<CR>
 
 
 "
@@ -201,8 +209,3 @@ vmap <silent> <S-Space> <Space><Space>
 
 " Ctrl-C copies to clipboard
 vnoremap <C-C> "+y
-
-" Unite file search
-nnoremap <Leader>s :Unite -start-insert file_rec<CR>
-
-nnoremap <Leader>y :Unite history/yank<CR>
