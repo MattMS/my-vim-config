@@ -1,3 +1,4 @@
+" Use Vim features that may not be compatible with Vi.
 set nocompatible
 
 
@@ -5,8 +6,11 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 
+" Turn on syntax highlighting.
 syntax on
 
+" Turn on file type detection, by file name extension and `#!` line.
+" Used for syntax highlighting and indentation rules.
 filetype plugin indent on
 
 
@@ -40,11 +44,26 @@ let g:netrw_sort_sequence='^\.\.?[\/]$,*,^\.[^.\/]'
 let g:unite_source_history_yank_enable=1
 
 
+" Maintain indentation level from the previous line.
+"set autoindent
+
 " Allow backspace to work on existing text when entering insert mode.
 " http://vim.wikia.com/wiki/Erasing_previously_entered_characters_in_insert_mode
 set backspace=eol,indent,start
 
+" Keep a backup of a file when overwriting it.
+"set backup
+
+" Set lines reserved for messages at the bottom of the screen.
+"set cmdheight=3
+
 set colorcolumn=72,80
+
+" Do not change tabs to spaces.
+set noexpandtab
+
+" Remember the last 50 commands and search patterns.
+"set history=50
 
 " Highlight the search text as you search for it.
 set hlsearch
@@ -52,19 +71,54 @@ set hlsearch
 " Search as you type characters.
 set incsearch
 
+" Set which characters can appear in a word.
+" @ for alphabet
+" 48-57 for numbers
+"set iskeyword=@,48-57,_
+"set iskeyword+=-
+"set iskeyword-=_
+
 " 0 = show on horizontal split.
 " 1 = show if 2+ windows.
 " 2 = always show.
 set laststatus=0
 
-" Do not change tabs to spaces.
-set noexpandtab
+" Display tabs and end of line characters.
+"set list
+
+" Control the display of whitespace characters.
+"set listchars=tab:>-,trail:-
+
+" Show the cursor position in the lower right corner.
+"set ruler
+
+" Scroll veritcally at 2 remaining characters.
+"set scrolloff=2
 
 set shiftwidth=4
 
+" Show the incomplete command in the lower right corner.
+"set showcmd
+
+" Show the current mode in the lower left corner.
+"set showmode
+
+" Scroll horizontally at 12 remaining characters.
+"set sidescroll=12
+
 set tabstop=4
 
+" Allow moving to the previous or next line.
+" Normal mode <BS>: b
+" Normal mode <Space>: s
+" Normal mode <Left> and <Right>: < and >
+" Insert mode <Left> and <Right>: [ and ]
+"set whichwrap=b,s,<,>,[,]
+
 set wildignore+=ENV*,*/tmp/*,*.pyc,*.so,*.swp,*.zip
+
+" Prevent Vim from wrapping long lines.
+"set nowrap
 
 
 if has('gui_running')
@@ -98,6 +152,22 @@ else
 	colorscheme slate
 endif
 
+
+" Set the textwidth to 72 in the file if the file type is 'text'.
+"autocmd FileType text setlocal textwidth=72
+
+
+" Keyboard mappings.
+" <BS>
+" <Enter>
+" <Esc>
+" <F1>
+" <Left>
+" <Right>
+" <Space>
+" \
+"
+" Use `:map` to list current mappings.
 
 "
 " Normal mode
