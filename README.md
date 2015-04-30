@@ -98,6 +98,21 @@ git commit -m "Remove my_submodule"
 rm -rf .git/modules/bundle/my_submodule
 ```
 
+
 ## Notes
 
 - http://vim.wikia.com/wiki/Easier_buffer_switching
+
+
+### Plugins
+
+Place plugins in `~/.vim/plugin/` or `$HOME/vimfiles/plugin`.
+
+File type plugins are in `~/.vim/plugin/ftplugin`.
+`name` can be anything.
+
+- ftplugin/<filetype>.vim
+
+- ftplugin/<filetype>_<name>.vim
+
+- ftplugin/<filetype>/<name>.vim
