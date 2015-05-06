@@ -187,6 +187,13 @@ nnoremap <S-Return> O<ESC>j
 " This is followed by the direction/method of search.
 nmap <silent> <S-Space> <Space><Space>
 
+" Show buffers with single key switching.
+nnoremap <Leader>b :Unite buffer -quick-match<CR>
+
+" Show buffers with normal navigation.
+" `d` deletes the highlighted buffer.
+nnoremap <Leader>B :Unite buffer<CR>
+
 " Start nerdcommenter (shortcut added by plugin).
 " nnoremap <Leader>c
 
