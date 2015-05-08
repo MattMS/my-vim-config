@@ -234,6 +234,9 @@ nnoremap <Leader>p :bprevious<CR>
 " Ctrl-Q to quit completely.
 nnoremap <silent> <C-Q> :quitall<CR>
 
+" `Leader q` to quit completely.
+"nnoremap <silent> <Leader>q :quitall<CR>
+
 " Ctrl-S to save.
 nnoremap <silent> <C-S> :write<CR>
 
