@@ -231,14 +231,14 @@ nnoremap <Leader>n :bnext<CR>
 " Same as `:bp`.
 nnoremap <Leader>p :bprevious<CR>
 
+" Ctrl-Q to quit completely.
+nnoremap <silent> <C-Q> :quitall<CR>
+
 " Ctrl-S to save.
 nnoremap <silent> <C-S> :write<CR>
 
 " Unite file search
 "nnoremap <Leader>s :Unite -start-insert file_rec<CR>
-
-" Ctrl-Q to quit completely.
-nnoremap <silent> <C-Q> :quitall<CR>
 
 " Control window splits with `Space w` instead of `Ctrl+w`
 nnoremap <Leader>w <C-W>
