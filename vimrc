@@ -148,6 +148,10 @@ if has('gui_running')
 
 	colorscheme solarized
 
+	" Can't get bells to disable
+	" https://stackoverflow.com/questions/18589352/cant-get-bells-to-disable
+	autocmd GUIEnter * set vb t_vb=
+
 else
 	colorscheme slate
 endif
