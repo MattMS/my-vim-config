@@ -272,6 +272,7 @@ inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
+inoremap ` ``<ESC>i
 
 " Ctrl-S to save
 inoremap <silent> <C-S> <ESC>:w<CR>
