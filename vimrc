@@ -14,6 +14,9 @@ syntax on
 filetype plugin indent on
 
 
+au BufNewFile,BufRead *.cson set filetype=cson
+
+
 " Use space as the mapleader character.
 let mapleader=" "
 
