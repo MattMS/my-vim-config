@@ -95,7 +95,7 @@ set laststatus=0
 " Show the cursor position in the lower right corner.
 "set ruler
 
-" Scroll veritcally at 2 remaining characters.
+" Scroll vertically at 2 remaining characters.
 "set scrolloff=2
 
 set shiftwidth=4
