@@ -250,6 +250,9 @@ nnoremap <silent> <C-S> :write<CR>
 " Unite file search
 "nnoremap <Leader>s :Unite -start-insert file_rec<CR>
 
+" Open file browser in vertical split.
+nnoremap <Leader>v :Vexplore<CR>
+
 " Control window splits with `Space w` instead of `Ctrl+w`
 nnoremap <Leader>w <C-W>
 
