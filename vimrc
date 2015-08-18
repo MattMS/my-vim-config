@@ -109,6 +109,11 @@ set shiftwidth=4
 " Scroll horizontally at 12 remaining characters.
 "set sidescroll=12
 
+" `smartcase` will use case-sensitive search if any character is upper-case.
+" `/\c` switches to case-insensitive.
+" `/\C` switches to case-sensitive.
+"set smartcase
+
 set tabstop=4
 
 " Allow moving to the previous or next line.
