@@ -258,7 +258,9 @@ nnoremap <silent> <C-S> :write<CR>
 " Open file browser in vertical split.
 nnoremap <Leader>v :Vexplore<CR>
 
-nnoremap <C-V> "+p
+" Ctrl-V pastes from clipboard
+" NOTE: This breaks the block selection mode.
+"nnoremap <C-V> "+p
 
 " Control window splits with `Space w` instead of `Ctrl+w`
 nnoremap <Leader>w <C-W>
