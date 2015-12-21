@@ -32,6 +32,7 @@ All plugins are loaded with
 
 - [Easymotion](https://github.com/Lokaltog/vim-easymotion)
 - [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
+- [Fugitive](https://github.com/tpope/vim-fugitive)
 - [NERD Commenter](https://github.com/scrooloose/nerdcommenter)
 - [Repeat](https://github.com/tpope/vim-repeat)
 - [speeddating](https://github.com/tpope/vim-speeddating)
@@ -59,10 +60,6 @@ Used [Airline](https://github.com/bling/vim-airline) for a while, but
 could never get the patched fonts to work.
 Removed when I realised I did not check it enough to justify having it.
 `Ctrl + G` works fine.
-
-Removed [Fugitive](https://github.com/tpope/vim-fugitive) because it
-seemed to have issues on Windows.
-I also use aliases to the normal `git` commands now anyway.
 
 Replaced [Ctrlp](https://github.com/kien/ctrlp.vim) with Unite.
 
