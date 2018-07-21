@@ -15,6 +15,7 @@ filetype plugin indent on
 
 
 au BufNewFile,BufRead *.cson set filetype=cson
+au BufNewFile,BufRead *.tsv set filetype=tsv
 
 
 " Use space as the mapleader character.
